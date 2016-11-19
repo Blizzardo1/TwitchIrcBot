@@ -35,6 +35,9 @@
   <PropertyGroup>
     <StartupObject>IrcBot.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -8,6 +8,7 @@ namespace IrcBot
         private int _hopCount;
         private List<Channel> _channels;
 
+        // TODO: Implement this
         public static User [ ] GetUsers ( Irc irc )
         {
             List<User> lst = new List<User> ( );

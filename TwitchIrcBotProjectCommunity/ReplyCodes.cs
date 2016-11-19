@@ -997,7 +997,7 @@ namespace IrcBot.ReplyCodes
         /// </summary>
         RplHostHidden = 396
     }
-    
+
     /// <summary>
     /// </summary>
     public class Constants

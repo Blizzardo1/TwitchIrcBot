@@ -79,7 +79,7 @@ namespace IrcBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to IrcBot made by Blizzardo&apos;s Twitch Stream.
+        ///   Looks up a localized string similar to IrcBot made by Blizzardo&apos;s Twitch Stream!.
         /// </summary>
         internal static string BotDefaultRealName {
             get {

@@ -18,38 +18,38 @@
         {
             // JOIN #channel [key]
             if ( _key.IsEmpty ( ) )
-                _irc.Raw ( "JOIN", Irc.margs ( _name ) );
+                _irc.Raw ( "JOIN", Irc.Margs ( _name ) );
             else
-                _irc.Raw ( "JOIN", Irc.margs ( _name, _key ) );
+                _irc.Raw ( "JOIN", Irc.Margs ( _name, _key ) );
         }
 
         public void Part ( string reason = "I am leaving" )
         {
             // PART #channel :reason
-            _irc.Raw ( "PART", Irc.margs ( _name ), reason );
+            _irc.Raw ( "PART", Irc.Margs ( _name ), reason );
         }
 
         public bool Kick ( string nick, string reason )
         {
-            _irc.Raw ( "KICK", Irc.margs ( _name, nick ), reason );
+            _irc.Raw ( "KICK", Irc.Margs ( _name, nick ), reason );
             return false;
         }
 
         public bool ChangeTopic ( string newTopic )
         {
-            _irc.Raw ( "TOPIC", Irc.margs ( _name ), newTopic );
+            _irc.Raw ( "TOPIC", Irc.Margs ( _name ), newTopic );
             return false;
         }
 
-        public bool Mode ( bool append, string modeSet, string[] nicks )
+        public bool Mode ( bool append, string modeSet, string [ ] nicks )
         {
             // MODE #channel +/-modes [nick,]
             char m = append ? '+' : '-';
             string mSet = $"{m}{modeSet}";
             if ( nicks != null )
-                _irc.Raw ( "MODE", Irc.margs ( _name, mSet, nicks.Compile ( "," ) ) );
+                _irc.Raw ( "MODE", Irc.Margs ( _name, mSet, nicks.Compile ( "," ) ) );
             else
-                _irc.Raw ( "MODE", Irc.margs ( _name, mSet ) );
+                _irc.Raw ( "MODE", Irc.Margs ( _name, mSet ) );
 
             return false;
         }
